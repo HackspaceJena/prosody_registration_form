@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ein XMPP-Konto registrieren</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+<div class="container">
+<form class="form-horizontal" method="post">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Ein XMPP-Konto registrieren</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="username">Benutzername</label>
+  <div class="controls">
+    <input id="username" name="username" placeholder="bernd" class="input-xlarge" required="" type="text">
+    <p class="help-block">Gib hier deinen gewünschten Benutzernamen ein.</p>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="host">Server</label>
+  <div class="controls">
+    <select id="host" name="host" class="input-xlarge" required="">
+      <option></option>
+      <option>krautspace.de</option>
+    </select>
+    <p class="help-block">Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span class="xmpp-id-preview">Benutzername@Servername</span></p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="mail">E-Mail-Adresse</label>
+  <div class="controls">
+    <input id="mail" name="mail" placeholder="bernd@example.com" class="input-xlarge" required="" type="text">
+    <p class="help-block">Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.</p>
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="control-group">
+  <label class="control-label" for="password">Passwort:</label>
+  <div class="controls">
+    <input id="password" name="password" placeholder="" class="input-xlarge" required="" type="password">
+    <p class="help-block">Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.</p>
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="control-group">
+  <label class="control-label" for="password_repeat">Passwortwiederholung</label>
+  <div class="controls">
+    <input id="password_repeat" name="password_repeat" placeholder="" class="input-xlarge" required="" type="password">
+    <p class="help-block">Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.</p>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="control-group">
+  <label class="control-label" for="submit"></label>
+  <div class="controls">
+    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+    <button id="cancel" name="cancel" class="btn btn-danger">Abbrechen</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</body>
+</html>
+
