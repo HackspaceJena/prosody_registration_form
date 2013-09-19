@@ -1,6 +1,11 @@
 {
     "require": {
         "silex/silex": "~1.0",
-	"twig/twig": ">=1.8,<2.0-dev"
+	"twig/twig": ">=1.8,<2.0-dev",
+        "symfony/twig-bridge": "~2.3",
+        "symfony/translation": "~2.3",
+        "symfony/config": "~2.3",
+        "swiftmailer/swiftmailer": "~5.0",
+        "guzzle/guzzle": "~3.7"
     }
 }
