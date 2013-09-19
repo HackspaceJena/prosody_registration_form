@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2
+       xliff-core-1.2-transitional.xsd"
+       version="1.2">
+ <file source-language="de" datatype="plaintext" original="file.ext">
+  <body>
+   <trans-unit id="1">
+     <source>Ein XMPP-Konto registrieren</source>
+   </trans-unit>
+   <trans-unit id="2">
+     <source>Bitte behebe folgende Fehler bevor du weiter machen kannst</source>
+   </trans-unit>
+   <trans-unit id="3">
+     <source>Benutzername</source>
+   </trans-unit>
+   <trans-unit id="4">
+     <source>Gib hier deinen gewünschten Benutzernamen ein.</source>
+   </trans-unit>
+   <trans-unit id="5">
+     <source>Server</source>
+   </trans-unit>
+   <trans-unit id="6">
+     <source>Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;</source>
+   </trans-unit>
+   <trans-unit id="7">
+     <source>E-Mail-Adresse</source>
+   </trans-unit>
+   <trans-unit id="8">
+     <source>Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.</source>
+   </trans-unit>
+   <trans-unit id="9">
+     <source>Passwort</source>
+   </trans-unit>
+   <trans-unit id="10">
+     <source>Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.</source>
+   </trans-unit>
+   <trans-unit id="11">
+     <source>Passwortwiederholung</source>
+   </trans-unit>
+   <trans-unit id="12">
+     <source>Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.</source>
+   </trans-unit>
+   <trans-unit id="13">
+     <source>Absenden</source>
+   </trans-unit>
+   <trans-unit id="14">
+     <source>Abbrechen</source>
+   </trans-unit>
+   <trans-unit id="15">
+     <source>Kein Benutzername angegeben.</source>
+   </trans-unit>
+   <trans-unit id="16">
+     <source>Keinen Hostnamen angegeben.</source>
+   </trans-unit>
+   <trans-unit id="17">
+     <source>Keine E-Mail-Adresse angegeben.</source>
+   </trans-unit>
+   <trans-unit id="18">
+     <source>Keine gültige E-Mail-Adresse angegeben.</source>
+   </trans-unit>
+   <trans-unit id="19">
+     <source>Kein Passwort angegeben.</source>
+   </trans-unit>
+   <trans-unit id="20">
+     <source>Bitte gebe in den Feldern Passwort und Passwortwiederholung identische Werte ein.</source>
+   </trans-unit>
+  </body>
+ </file>
+</xliff>

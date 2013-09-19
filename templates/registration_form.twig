@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ein XMPP-Konto registrieren</title>
+    <title>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,53 +19,53 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Ein XMPP-Konto registrieren</legend>
+<legend>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</legend>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="username">Benutzername</label>
+  <label class="control-label" for="username">{% trans %}Benutzername{% endtrans %}</label>
   <div class="controls">
     <input id="username" name="username" placeholder="bernd" class="input-xlarge" required="" type="text">
-    <p class="help-block">Gib hier deinen gewünschten Benutzernamen ein.</p>
+    <p class="help-block">{% trans %}Gib hier deinen gewünschten Benutzernamen ein.{% endtrans %}</p>
   </div>
 </div>
 
 <!-- Select Basic -->
 <div class="control-group">
-  <label class="control-label" for="host">Server</label>
+  <label class="control-label" for="host">{% trans %}Server{% endtrans %}</label>
   <div class="controls">
     <select id="host" name="host" class="input-xlarge" required="">
       <option></option>
       <option>krautspace.de</option>
     </select>
-    <p class="help-block">Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span class="xmpp-id-preview">Benutzername@Servername</span></p>
+    <p class="help-block">{% trans %}Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span class="xmpp-id-preview">Benutzername@Servername</span>{% endtrans %}</p>
   </div>
 </div>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="mail">E-Mail-Adresse</label>
+  <label class="control-label" for="mail">{% trans %}E-Mail-Adresse{% endtrans %}</label>
   <div class="controls">
     <input id="mail" name="mail" placeholder="bernd@example.com" class="input-xlarge" required="" type="text">
-    <p class="help-block">Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.</p>
+    <p class="help-block">{% trans %}Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.{% endtrans %}</p>
   </div>
 </div>
 
 <!-- Password input-->
 <div class="control-group">
-  <label class="control-label" for="password">Passwort:</label>
+  <label class="control-label" for="password">{% trans %}Passwort{% endtrans %}:</label>
   <div class="controls">
     <input id="password" name="password" placeholder="" class="input-xlarge" required="" type="password">
-    <p class="help-block">Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.</p>
+    <p class="help-block">{% trans %}Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.{% endtrans %}</p>
   </div>
 </div>
 
 <!-- Password input-->
 <div class="control-group">
-  <label class="control-label" for="password_repeat">Passwortwiederholung</label>
+  <label class="control-label" for="password_repeat">{% trans %}Passwortwiederholung{% endtrans %}</label>
   <div class="controls">
     <input id="password_repeat" name="password_repeat" placeholder="" class="input-xlarge" required="" type="password">
-    <p class="help-block">Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.</p>
+    <p class="help-block">{% trans %}Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.{% endtrans %}</p>
   </div>
 </div>
 
@@ -73,8 +73,8 @@
 <div class="control-group">
   <label class="control-label" for="submit"></label>
   <div class="controls">
-    <button id="submit" name="submit" class="btn btn-success">Submit</button>
-    <button id="cancel" name="cancel" class="btn btn-danger">Abbrechen</button>
+    <button id="submit" name="submit" class="btn btn-success">{% trans %}Absenden{% endtrans %}</button>
+    <button id="cancel" name="cancel" class="btn btn-danger">{% trans %}Abbrechen{% endtrans %}</button>
   </div>
 </div>
 
@@ -83,4 +83,3 @@
 </div>
 </body>
 </html>
-
