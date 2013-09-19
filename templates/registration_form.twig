@@ -21,6 +21,17 @@
 <!-- Form Name -->
 <legend>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</legend>
 
+{% if errors %}
+<div class="alert alert-danger">
+  <p>{% trans %}Bitte behebe folgende Fehler bevor du weiter machen kannst{% endtrans %}:</p>
+<ul>
+{% for error in errors %}
+<li>{{ error }}</li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}
+
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="username">{% trans %}Benutzername{% endtrans %}</label>
