@@ -11,6 +11,81 @@
      <source>Ein XMPP-Konto registrieren</source>
      <target>Register an xmpp account</target>
    </trans-unit>
+      <trans-unit id="2">
+     <source>Bitte behebe folgende Fehler bevor du weiter machen kannst</source>
+     <target>Please resolve open issues before going on</target>
+   </trans-unit>
+   <trans-unit id="3">
+     <source>Benutzername</source>
+     <target>Username</target>
+   </trans-unit>
+   <trans-unit id="4">
+     <source>Gib hier deinen gewünschten Benutzernamen ein.</source>
+     <target>Please insert here your prefered username.</target>
+   </trans-unit>
+   <trans-unit id="5">
+     <source>Server</source>
+   </trans-unit>
+   <trans-unit id="6">
+     <source>Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;</source>
+     <target>Please choose here your server name. Your XMPP-ID will &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;<be</target>
+   </trans-unit>
+   <trans-unit id="7">
+     <source>E-Mail-Adresse</source>
+     <target>E-mail address</target>
+   </trans-unit>
+   <trans-unit id="8">
+     <source>Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.</source>
+     <target>Please insert a valid email address. This address will be used to send a validation code and will not be stored.</target>
+   </trans-unit>
+   <trans-unit id="9">
+     <source>Passwort</source>
+     <target>Password</target>
+   </trans-unit>
+   <trans-unit id="10">
+     <source>Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.</source>
+     <target>Please choose a strong password. It shall be at least 8 characters long. We recommend 12 characters and longer containing capital and small letter as well as numbers and special characers.</target>
+   </trans-unit>
+   <trans-unit id="11">
+     <source>Passwortwiederholung</source>
+     <target>Password confirmation</target>
+   </trans-unit>
+   <trans-unit id="12">
+     <source>Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.</source>
+     <target>Please repeat here your choosen password to ensure, you didn't add any typo.</target>
+   </trans-unit>
+   <trans-unit id="13">
+     <source>Absenden</source>
+     <target>Send</target>
+   </trans-unit>
+   <trans-unit id="14">
+     <source>Abbrechen</source>
+     <target>Cancel</target>
+   </trans-unit>
+   <trans-unit id="15">
+     <source>Kein Benutzername angegeben.</source>
+     <target>No username given.</target>
+   </trans-unit>
+   <trans-unit id="16">
+     <source>Keinen Hostnamen angegeben.</source>
+     <target>No hostname given.</target>
+   </trans-unit>
+   <trans-unit id="17">
+     <source>Keine E-Mail-Adresse angegeben.</source>
+     <target>No email address given.</target>
+   </trans-unit>
+   <trans-unit id="18">
+     <source>Keine gültige E-Mail-Adresse angegeben.</source>
+     <target>No valid email address given.</target>
+   </trans-unit>
+   <trans-unit id="19">
+     <source>Kein Passwort angegeben.</source>
+     <target>No password given.</target>
+   </trans-unit>
+   <trans-unit id="20">
+     <source>Bitte gebe in den Feldern Passwort und Passwortwiederholung identische Werte ein.</source>
+     <target>Password and passowrd confirmation must be in synch</target>
+   </trans-unit>
   </body>
  </file>
 </xliff>
