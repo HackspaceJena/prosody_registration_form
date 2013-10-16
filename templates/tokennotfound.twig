@@ -1,5 +1,13 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-<p>{% trans %}Der angegebene Token wurde nicht gefunden{% endtrans %}</p>
+    <form class="form-horizontal" method="post">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</legend>
+            <p>{% trans %}Der angegebene Token wurde nicht gefunden{% endtrans %}</p>
+
+        </fieldset>
+    </form>
 {% endblock %}
