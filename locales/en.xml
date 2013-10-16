@@ -28,7 +28,7 @@
    </trans-unit>
    <trans-unit id="6">
      <source>Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;</source>
-     <target>Please choose here your server name. Your XMPP-ID will &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;<be</target>
+     <target>Please choose here your server name. Your XMPP-ID will &lt;span class="xmpp-id-preview"&gt;Benutzername@Servername&lt;/span&gt;</target>
    </trans-unit>
    <trans-unit id="7">
      <source>E-Mail-Adresse</source>
