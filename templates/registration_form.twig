@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends "layout.twig" %}
 
-    <title>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-<div class="container">
+{% block content %}
 <form class="form-horizontal" method="post">
 <fieldset>
 
@@ -47,7 +33,9 @@
   <div class="controls">
     <select id="host" name="host" class="input-xlarge" required="">
       <option></option>
-      <option>krautspace.de</option>
+      {% for host in hosts %}
+      <option>{{ host }}</option>
+      {% endfor %}
     </select>
     <p class="help-block">{% trans %}Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span class="xmpp-id-preview">Benutzername@Servername</span>{% endtrans %}</p>
   </div>
@@ -91,6 +79,4 @@
 
 </fieldset>
 </form>
-</div>
-</body>
-</html>
+{% endblock %}
