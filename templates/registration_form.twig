@@ -1,82 +1,104 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-<form class="form-horizontal" method="post">
-<fieldset>
+    <form class="form-horizontal" method="post">
+        <fieldset>
 
-<!-- Form Name -->
-<legend>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</legend>
+            <!-- Form Name -->
+            <legend>{% trans %}Ein XMPP-Konto registrieren{% endtrans %}</legend>
 
-{% if errors %}
-<div class="alert alert-danger">
-  <p>{% trans %}Bitte behebe folgende Fehler bevor du weiter machen kannst{% endtrans %}:</p>
-<ul>
-{% for error in errors %}
-<li>{{ error }}</li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
+            {% if errors %}
+                <div class="alert alert-danger">
+                    <p>{% trans %}Bitte behebe folgende Fehler bevor du weiter machen kannst{% endtrans %}:</p>
+                    <ul>
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="username">{% trans %}Benutzername{% endtrans %}</label>
-  <div class="controls">
-    <input id="username" name="username" placeholder="bernd" class="input-xlarge" required="" type="text">
-    <p class="help-block">{% trans %}Gib hier deinen gewünschten Benutzernamen ein.{% endtrans %}</p>
-  </div>
-</div>
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="username">{% trans %}Benutzername{% endtrans %}</label>
 
-<!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="host">{% trans %}Server{% endtrans %}</label>
-  <div class="controls">
-    <select id="host" name="host" class="input-xlarge" required="">
-      <option></option>
-      {% for host in hosts %}
-      <option>{{ host }}</option>
-      {% endfor %}
-    </select>
-    <p class="help-block">{% trans %}Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span class="xmpp-id-preview">Benutzername@Servername</span>{% endtrans %}</p>
-  </div>
-</div>
+                <div class="controls">
+                    <input id="username" name="username" placeholder="bernd" class="input-xlarge" required=""
+                           type="text">
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="mail">{% trans %}E-Mail-Adresse{% endtrans %}</label>
-  <div class="controls">
-    <input id="mail" name="mail" placeholder="bernd@example.com" class="input-xlarge" required="" type="text">
-    <p class="help-block">{% trans %}Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.{% endtrans %}</p>
-  </div>
-</div>
+                    <p class="help-block">{% trans %}Gib hier deinen gewünschten Benutzernamen ein.{% endtrans %}</p>
+                </div>
+            </div>
 
-<!-- Password input-->
-<div class="control-group">
-  <label class="control-label" for="password">{% trans %}Passwort{% endtrans %}</label>
-  <div class="controls">
-    <input id="password" name="password" placeholder="" class="input-xlarge" required="" type="password">
-    <p class="help-block">{% trans %}Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und Sonderzeichen.{% endtrans %}</p>
-  </div>
-</div>
+            <!-- Select Basic -->
+            <div class="control-group">
+                <label class="control-label" for="host">{% trans %}Server{% endtrans %}</label>
 
-<!-- Password input-->
-<div class="control-group">
-  <label class="control-label" for="password_repeat">{% trans %}Passwortwiederholung{% endtrans %}</label>
-  <div class="controls">
-    <input id="password_repeat" name="password_repeat" placeholder="" class="input-xlarge" required="" type="password">
-    <p class="help-block">{% trans %}Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen, dass du dich auch nicht vertippt hast.{% endtrans %}</p>
-  </div>
-</div>
+                <div class="controls">
+                    <select id="host" name="host" class="input-xlarge" required="">
+                        <option></option>
+                        {% for host in hosts %}
+                            <option>{{ host }}</option>
+                        {% endfor %}
+                    </select>
 
-<!-- Button (Double) -->
-<div class="control-group">
-  <label class="control-label" for="submit"></label>
-  <div class="controls">
-    <button type="submit" id="submit" name="submit" class="btn btn-success">{% trans %}Absenden{% endtrans %}</button>
-    <button type="reset" id="cancel" name="cancel" class="btn btn-danger">{% trans %}Abbrechen{% endtrans %}</button>
-  </div>
-</div>
+                    <p class="help-block">{% trans %}Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span
+                                class="xmpp-id-preview">Benutzername@Servername</span>{% endtrans %}</p>
+                </div>
+            </div>
 
-</fieldset>
-</form>
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="mail">{% trans %}E-Mail-Adresse{% endtrans %}</label>
+
+                <div class="controls">
+                    <input id="mail" name="mail" placeholder="bernd@example.com" class="input-xlarge" required=""
+                           type="text">
+
+                    <p class="help-block">{% trans %}Gib hier eine gültige E-Mail-Adresse ein. Die Adresse wird benutzt
+                        um dir einen Validierungscode zu schicken, sie wird nicht gespeichert.{% endtrans %}</p>
+                </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+                <label class="control-label" for="password">{% trans %}Passwort{% endtrans %}</label>
+
+                <div class="controls">
+                    <input id="password" name="password" placeholder="" class="input-xlarge" required=""
+                           type="password">
+
+                    <p class="help-block">{% trans %}Bitte wähle ein starkes Passwort. Also mindestens 8, besser 12 oder
+                        mehr Zeichen mit einer möglichst großen Variation aus Klein- und Großbuchstaben, Zahlen und
+                        Sonderzeichen.{% endtrans %}</p>
+                </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+                <label class="control-label" for="password_repeat">{% trans %}Passwortwiederholung{% endtrans %}</label>
+
+                <div class="controls">
+                    <input id="password_repeat" name="password_repeat" placeholder="" class="input-xlarge" required=""
+                           type="password">
+
+                    <p class="help-block">{% trans %}Bitte wiederhole hier dein gewähltes Passwort um sicherzustellen,
+                        dass du dich auch nicht vertippt hast.{% endtrans %}</p>
+                </div>
+            </div>
+
+            <!-- Button (Double) -->
+            <div class="control-group">
+                <label class="control-label" for="submit"></label>
+
+                <div class="controls">
+                    <button type="submit" id="submit" name="submit" class="btn btn-success">{% trans %}
+                        Absenden{% endtrans %}</button>
+                    <button type="reset" id="cancel" name="cancel" class="btn btn-danger">{% trans %}
+                        Abbrechen{% endtrans %}</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
 {% endblock %}
