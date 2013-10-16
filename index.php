@@ -84,13 +84,16 @@ $app->post('/', function (Request $request) use ($app, $config) {
     $client = new Client($config['prosody']['http_base']);
 
     $request = $client
-      ->get($config['prosody']['url_prefix'] . 'user/' . $user)
+      ->get($config['prosody']['url_prefix'] . 'user/' . $user, array('Host' => $host))
       ->setAuth($config['prosody']['user'], $config['prosody']['password']);
 
-    $response = $request->send();
-
-    if ($response->getStatusCode() != 404) {
+    try {
+      $response = $request->send();
       $errors[] = $app->trans('Der Benutzername ist bereits vergeben.');
+    } catch (\Guzzle\Http\Exception\ClientErrorResponseException $e) {
+      if ($e->getCode() != 404) {
+        $errors[] = $app->trans('Der Benutzername ist bereits vergeben.');
+      }
     }
   }
 
