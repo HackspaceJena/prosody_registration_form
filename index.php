@@ -89,11 +89,11 @@ $app->post('/', function (Request $request) use ($app, $config) {
 
     try {
       $response = $request->send();
-      $errors[] = $app->trans('Der Benutzername ist bereits vergeben.');
-    } catch (\Guzzle\Http\Exception\ClientErrorResponseException $e) {
-      if ($e->getCode() != 404) {
+      if ($response->getCode() != 404) {
         $errors[] = $app->trans('Der Benutzername ist bereits vergeben.');
       }
+    } catch (\Guzzle\Http\Exception\ClientErrorResponseException $e) {
+        
     }
   }
 
@@ -141,15 +141,15 @@ $app->post('/', function (Request $request) use ($app, $config) {
 });
 
 $app->get('/{verifycode}', function ($verifycode) use ($app, $config) {
-  if (file_exists('templates/' . $verifycode)) {
-    $data = json_decode(file_get_contents('templates/' . $verifycode));
+  if (file_exists('validations/' . $verifycode)) {
+    $data = json_decode(file_get_contents('validations/' . $verifycode));
 
-    $jid = $data['user'] . '@' . $data['server'];
+    $jid = $data->username . '@' . $data->server;
 
     $client = new Client($config['prosody']['http_base']);
 
     $request = $client
-      ->post($config['prosody']['url_prefix'] . 'user/' . $data->user, array(
+      ->post($config['prosody']['url_prefix'] . 'user/' . $data->username, array(
         'Host' => $data->server,
       ), json_encode(array('password' => $data->password)))
       ->setAuth($config['prosody']['user'], $config['prosody']['password']);
