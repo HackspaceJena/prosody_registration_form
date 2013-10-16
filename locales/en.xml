@@ -84,7 +84,7 @@
    </trans-unit>
    <trans-unit id="20">
      <source>Bitte gebe in den Feldern Passwort und Passwortwiederholung identische Werte ein.</source>
-     <target>Password and passowrd confirmation must be in synch</target>
+     <target>Password and passowrd confirmation must be in sync.</target>
    </trans-unit>
   </body>
  </file>
