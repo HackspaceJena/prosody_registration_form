@@ -4,7 +4,7 @@
 
 ### Prosody
 
-* Install "mod_admin_rest":(https://github.com/wltsmrz/mod_admin_rest)
+* Install [mod_admin_rest](https://github.com/wltsmrz/mod_admin_rest)
 
 ### Webserver
 
