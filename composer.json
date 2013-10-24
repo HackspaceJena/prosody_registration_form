@@ -6,6 +6,7 @@
     "symfony/translation": "~2.3",
     "symfony/config": "~2.3",
     "swiftmailer/swiftmailer": "~5.0",
-    "guzzle/guzzle": "~3.7"
+    "guzzle/guzzle": "~3.7",
+    "nikic/php-parser": "~0.9"
   }
 }
