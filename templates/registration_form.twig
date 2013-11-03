@@ -35,12 +35,16 @@
                 <label class="control-label" for="host">{% trans %}Server{% endtrans %}</label>
 
                 <div class="controls">
-                    <select id="host" name="host" class="input-xlarge" required="">
-                        <option></option>
-                        {% for host in hosts %}
-                            <option>{{ host }}</option>
-                        {% endfor %}
-                    </select>
+                    {% if hosts|length > 1 %}
+                        <select id="host" name="host" class="input-xlarge" required="">
+                            <option></option>
+                            {% for host in hosts %}
+                                <option>{{ host }}</option>
+                            {% endfor %}
+                        </select>
+                    {% elseif hosts|length == 1 %}
+                        <input name="host" id="host" class="input-xlarge" readonly value="{{ hosts[0] }}" type="text" />
+                    {% endif %}
 
                     <p class="help-block">{% trans %}Wähle hier einen Servernamen aus. Deine XMPP-ID ist dann <span
                                 class="xmpp-id-preview">Benutzername@Servername</span>{% endtrans %}</p>
