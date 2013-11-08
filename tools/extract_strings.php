@@ -3,9 +3,10 @@ require 'vendor/autoload.php';
 
 $translations = array();
 
-function format_xml(&$simpleXmlObject){
+function format_xml(&$simpleXmlObject)
+{
 
-    if( ! is_object($simpleXmlObject) ){
+    if (!is_object($simpleXmlObject)) {
         return "";
     }
     //Format XML to save indented tree rather than one line
@@ -19,7 +20,8 @@ function format_xml(&$simpleXmlObject){
 
 class MyNodeVisitor extends PHPParser_NodeVisitorAbstract
 {
-    public function enterNode(PHPParser_Node $node) {
+    public function enterNode(PHPParser_Node $node)
+    {
         global $translations;
         if ($node instanceof PHPParser_Node_Expr_MethodCall) {
             if ($node->name == 'trans') {
@@ -32,7 +34,7 @@ class MyNodeVisitor extends PHPParser_NodeVisitorAbstract
 $file = file_get_contents('index.php');
 
 $parser = new PHPParser_Parser(new PHPParser_Lexer);
-$traverser     = new PHPParser_NodeTraverser;
+$traverser = new PHPParser_NodeTraverser;
 $traverser->addVisitor(new MyNodeVisitor);
 
 try {
@@ -42,10 +44,10 @@ try {
     echo 'Parse Error: ', $e->getMessage();
 }
 
-foreach(glob('templates/*.twig') as $file) {
+foreach (glob('templates/*.twig') as $file) {
     $content = file_get_contents($file);
-    preg_match_all('/{% trans %}(.*){% endtrans %}/',$content,$matches);
-    $translations = array_merge($translations,$matches[1]);
+    preg_match_all('/{% trans %}(.*){% endtrans %}/', $content, $matches);
+    $translations = array_merge($translations, $matches[1]);
 }
 
 $translations = array_unique($translations);
@@ -72,13 +74,13 @@ $xml = new SimpleXMLElement($xml);
 
 $id = 1;
 
-foreach($translations as $translation) {
+foreach ($translations as $translation) {
     /** @var SimpleXMLElement $element */
     $element = $xml->file->body;
     $element = $element->addChild('trans-unit');
-    $element->addAttribute('id',$id);
+    $element->addAttribute('id', $id);
     $id++;
-    $element->addChild('source',$translation);
+    $element->addChild('source', $translation);
 }
 
 
