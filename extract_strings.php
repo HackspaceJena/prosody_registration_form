@@ -1,12 +1,15 @@
 <?php
 require 'vendor/autoload.php';
 
+$translations = array();
+
 class MyNodeVisitor extends PHPParser_NodeVisitorAbstract
 {
     public function enterNode(PHPParser_Node $node) {
+        global $translations;
         if ($node instanceof PHPParser_Node_Expr_MethodCall) {
             if ($node->name == 'trans') {
-                echo $node->args[0]->value->value."\n";
+                $translations[] = $node->args[0]->value->value;
             }
         }
     }
@@ -24,3 +27,13 @@ try {
 } catch (PHPParser_Error $e) {
     echo 'Parse Error: ', $e->getMessage();
 }
+
+foreach(glob('templates/*.twig') as $file) {
+    $content = file_get_contents($file);
+    preg_match_all('/{% trans %}(.*){% endtrans %}/',$content,$matches);
+    $translations = array_merge($translations,$matches[1]);
+}
+
+$translations = array_unique($translations);
+
+print_r($translations);
